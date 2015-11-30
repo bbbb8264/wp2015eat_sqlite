@@ -8,6 +8,7 @@
 	color:white;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
+    z-index: 20;
 }
 #menucontroll{
     position:fixed;
@@ -231,4 +232,13 @@
 }
 .itemfont{
 	font-size: 2rem!important;
+}
+#createlisttemplatebutton:hover{
+    cursor: pointer;
+}
+#listtemplatebutton:hover{
+    cursor: pointer;
+}
+#storetemplatebutton:hover{
+    cursor: pointer;
 }

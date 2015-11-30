@@ -1,0 +1,305 @@
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'searchlist.css' %}"/>
+	<script src="{% static 'searchlist.js' %}"></script>
+</head>
+<body>
+	<div class="ui stackable grid">
+		<div class="row">
+			<div class="sixteen wide column">
+				<div class="ui stackable grid" id="listcontent">
+					<div class="seven wide column">
+						<form class="form-horizontal" role="form">
+						  <div class="form-group">
+						    <label class="col-sm-2 control-label">名稱</label>
+						    <div class="col-sm-10">
+						      <p class="form-control-static" style="font-weight: bold;">觀光客必吃台南美食</p>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputPassword3" class="col-sm-2 control-label">作者</label>
+						    <div class="col-sm-10">
+						      <p class="form-control-static" style="font-weight: bold;">
+						      		bbbb8264
+						      </p>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputPassword3" class="col-sm-2 control-label">標籤</label>
+						    <div class="col-sm-10">
+						      <p class="form-control-static" id="listtagcontainer">
+						      		<a class="listtag">中餐</a>
+						      		<a class="listtag">午餐</a>
+						      		<a class="listtag">晚餐</a>
+						      		<a class="listtag">消夜</a>
+						      		<a class="listtag">龍捲風</a>
+						      		<a class="listtag">皮卡丘</a>
+						      		<a class="listtag">雷邱</a>
+						      		<a class="listtag">嗨嗨嗨嗨嗨</a>
+						      </p>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputPassword3" class="col-sm-2 control-label">介紹</label>
+						    <div class="col-sm-10" style="padding-top:7px;font-weight: 700;">
+						      <p>
+						      	華人的飲食文化淵遠流長，舉世皆知，雖然今天在國際上各大都市均可吃到中國菜，但是行家們仍一致認為唯有在臺灣才能品嚐到各式各樣道地的中國菜餚。
+
+民以食為天的臺灣，幾乎是三步一小吃店，五步一大餐廳，由北方口味的烤鴨、燻雞、涮羊肉、溜魚片、青椒炒牛肉、干貝蘿蔔球……，到南方口味的樟茶鴨、鹽焗雞、蜜汁火腿、爆炒蝦仁、乾燒茄子、麻婆豆腐……，可說是應有盡有。近年來由於工商業的發展快速，臺灣吃的文化除了傳統的中式飲食方式外，也發展到中式速食連鎖店的經營方式，使得臺灣吃的藝術變得更加繁複。因臺灣地處世界文化交流的總匯，世界各國的飲食也紛紛在臺灣出現，美國的漢堡、義大利的披薩、日本的生魚片、德國的豬腳、瑞士的乳酪等等，包羅萬象，讓臺灣著實成為饕家的天堂。而臺灣獨有的本土料理，風靡全球，嚐味一次，必將永生難忘。
+						      </p>
+						    </div>
+						  </div>
+						</form>
+					</div>
+					<div class="nine wide column">
+						<div class="ui styled accordion" style="margin:auto;border-radius: 1rem;">
+							  <div class="title">
+							    南園街鍋貼
+							  </div>
+							  <div class="content" style="padding:0.5em">
+							    <form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group" style="margin-bottom:5px;">
+								    <div class="col-sm-12" style="padding-top:7px">
+								      <a class="storeinformation">店家資訊</a>
+								    </div>
+								  </div>
+								</form>
+							  </div> 
+							  <div class="title">
+							    小妞炒飯
+							  </div>
+							  <div class="content" style="padding:0.5em">
+							    <form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group" style="margin-bottom:5px;">
+								    <div class="col-sm-12" style="padding-top:7px">
+								      <a class="storeinformation">店家資訊</a>
+								    </div>
+								  </div>
+								</form>
+							  </div> 
+							  <div class="title">
+							    紅地球
+							  </div>
+							  <div class="content" style="padding:0.5em">
+							    <form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group" style="margin-bottom:5px;">
+								    <div class="col-sm-12" style="padding-top:7px">
+								      <a class="storeinformation">店家資訊</a>
+								    </div>
+								  </div>
+								</form>
+							  </div> 
+							  <div class="title">
+							    活力小廚
+							  </div>
+							  <div class="content" style="padding:0.5em">
+							    <form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10" style="padding-top:7px">
+								      <p>
+								      	嘿嘿嘿 黑ㄋㄋ
+								      </p>
+								    </div>
+								  </div>
+								  <div class="form-group" style="margin-bottom:5px;">
+								    <div class="col-sm-12" style="padding-top:7px">
+								      <a class="storeinformation">店家資訊</a>
+								    </div>
+								  </div>
+								</form>
+							  </div> 
+							</div>
+
+					</div>
+					<div class="row">
+			<div id="commentcontainer">
+				<div class="ui card" style="width:95%;margin:auto;margin-top:15px;border-radius:20px">
+				  <div class="content">
+						<div class="ui comments">
+						  <div class="comment">
+						    <div class="content">
+						      <a class="author">閃電俠</a>
+						      <div class="metadata">
+						        <div class="date">2 days ago</div>
+						      </div>
+						      <div class="text" style="margin: 0.5em 0 0.5em;">
+						        我好快
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="extra content">
+						<div class="dislikebutton">
+						    <span class="right floated star" style="width:80px;text-align:center">
+						      &#128148;
+						      不喜歡
+						    </span>
+						</div>
+					  	<div class="likebutton">
+						    <span class="right floated like">
+						      &#10084;
+						      喜歡
+						    </span>
+						</div>
+				  </div>
+				</div>
+				<div class="ui card" style="width:95%;margin:auto;margin-top:15px;border-radius:20px">
+				  <div class="content">
+						<div class="ui comments">
+						  <div class="comment">
+						    <div class="content">
+						      <a class="author">閃電俠</a>
+						      <div class="metadata">
+						        <div class="date">2 days ago</div>
+						      </div>
+						      <div class="text" style="margin: 0.5em 0 0.5em;">
+						        我好快
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="extra content">
+						<div class="dislikebutton">
+						    <span class="right floated star" style="width:80px;text-align:center">
+						      &#128148;
+						      不喜歡
+						    </span>
+						</div>
+					  	<div class="likebutton">
+						    <span class="right floated like">
+						      &#10084;
+						      喜歡
+						    </span>
+						</div>
+				  </div>
+				</div>
+				<div class="ui card" style="width:95%;margin:auto;margin-top:15px;border-radius:20px">
+				  <div class="content">
+						<div class="ui comments">
+						  <div class="comment">
+						    <div class="content">
+						      <a class="author">閃電俠</a>
+						      <div class="metadata">
+						        <div class="date">2 days ago</div>
+						      </div>
+						      <div class="text" style="margin: 0.5em 0 0.5em;">
+						        我好快
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="extra content">
+						<div class="dislikebutton">
+						    <span class="right floated star" style="width:80px;text-align:center">
+						      &#128148;
+						      不喜歡
+						    </span>
+						</div>
+					  	<div class="likebutton">
+						    <span class="right floated like">
+						      &#10084;
+						      喜歡
+						    </span>
+						</div>
+				  </div>
+				</div>
+				<div class="ui card" style="width:95%;margin:auto;margin-top:15px;border-radius:20px">
+				  <div class="content">
+						<div class="ui comments">
+						  <div class="comment">
+						    <div class="content">
+						      <a class="author">閃電俠</a>
+						      <div class="metadata">
+						        <div class="date">2 days ago</div>
+						      </div>
+						      <div class="text" style="margin: 0.5em 0 0.5em;">
+						        我好快
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="extra content">
+						<div class="dislikebutton">
+						    <span class="right floated star" style="width:80px;text-align:center">
+						      &#128148;
+						      不喜歡
+						    </span>
+						</div>
+					  	<div class="likebutton">
+						    <span class="right floated like">
+						      &#10084;
+						      喜歡
+						    </span>
+						</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -7,11 +7,15 @@ from django.template.loader import render_to_string
 from mysite.models import *
 from django.template.context_processors import csrf
 import json
-
-def managelist(request):
+def searchlist(request):
 	c = {}
 	c.update(csrf(request))
-	return render_to_response("managelist.html", c)
+	return render_to_response("searchlist.html", c)
+
+def createlist(request):
+	c = {}
+	c.update(csrf(request))
+	return render_to_response("createlist.html", c)
 
 def search2(request):
 	c = {}

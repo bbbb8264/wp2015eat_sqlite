@@ -1,0 +1,210 @@
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'jquery-ui-1.11.4.custom/jquery-ui.min.css' %}"/>
+	<script src="{% static 'jquery-ui-1.11.4.custom/jquery-ui.min.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'createlist.css' %}"/>
+	<script src="{% static 'createlist.js' %}"></script>
+</head>
+<body>
+	<div id="statusbuttonwrapper" style="width: 12%;float: left;">
+		<button id="createlistbutton" type="button" class="btn btn-primary disabled" style="
+		width: 80%;margin: auto;display: block;height: 120px;">建立清單</button>
+		<button id="addlistdescriptionbutton" type="button" class="btn btn-default" style="
+		width: 80%;margin: auto;display: block;height: 120px;margin-top: 80px;" disabled="disabled">添加清單敘述
+		</button>
+		<button id="leftfinishbutton" type="button" class="btn btn-default" style="
+		width: 80%;margin: auto;display: block;height: 120px;margin-top: 80px;" disabled="disabled">完成
+		</button>
+	</div>
+	<div id="monitor" style="width:88%;float:right;overflow:hidden">
+		<div id="shiftcontroller">
+			<div id="customlistmenu" class="ui stackable grid">
+				<div class="six wide column">
+					<div id="storesfilter">
+						<div class="ui fluid multiple search selection dropdown" style="z-index:15;">
+              <input type="hidden" name="tag" value="">
+              <input class="search" tabindex="0"><div class="default text" style="color: rgb(179,179,179);">使用標籤來找尋想要放到清單的店家吧</div>
+              <div class="menu transition hidden" id="searchdropdownmenu" tabindex="-1"><div class="item" data-value="1" data-title="早餐" data-content="紮等 breakfast 早餐">早餐</div><div class="item" data-value="2" data-title="西餐" data-content="洋人引進的美食XDDD">西餐</div><div class="item" data-value="3" data-title="古早味" data-content="懷舊的味道">古早味</div><div class="item selected" data-value="4" data-title="甜點" data-content="女人的第二個胃">甜點</div><div class="item" data-value="5" data-title="飲料" data-content="喝喝喝">飲料</div><div class="item" data-value="6" data-title="麵食" data-content="老闆下麵給你吃！">麵食</div><div class="item" data-value="7" data-title="焗烤" data-content="好吃的焗烤">焗烤</div><div class="item" data-value="8" data-title="義大利麵" data-content="就是義大利麵">義大利麵</div><div class="item" data-value="9" data-title="女人的最愛" data-content="各種女生喜歡吃的店家">女人的最愛</div><div class="item" data-value="10" data-title="冰品" data-content="夏天就是要吃冰，不然要幹麻？">冰品</div><div class="item" data-value="11" data-title="約會聖地" data-content="轉那，轉那，七彩霓虹燈！閃死你！">約會聖地</div><div class="item" data-value="12" data-title="單身煉獄" data-content="QAQQQQQQ">單身煉獄</div><div class="item" data-value="13" data-title="韓國料理" data-content="韓國料理">韓國料理</div><div class="item" data-value="14" data-title="日本料理" data-content="日本料理">日本料理</div><div class="item" data-value="15" data-title="客家美食" data-content="台灣傳統客家美食">客家美食</div><div class="item" data-value="16" data-title="速食" data-content="速食餐點">速食</div><div class="item" data-value="17" data-title="不健康" data-content="專賣垃圾食物店家">不健康</div><div class="item" data-value="18" data-title="老鼠蟑螂滿街跑" data-content="O_O 好噁心">老鼠蟑螂滿街跑</div><div class="item" data-value="19" data-title="男人最愛" data-content="男人最愛">男人最愛</div><div class="item" data-value="20" data-title="下午茶" data-content="下午茶">下午茶</div><div class="item" data-value="21" data-title="宵夜" data-content="夜晚的好夥伴">宵夜</div><div class="item" data-value="22" data-title="深夜" data-content="深夜寂寞孤單覺得冷，就是要吃東西呀">深夜</div></div>
+            </div>
+						<div id="stores">
+							<div class="ui styled accordion filteritem" data-pos="stores" 
+							data-anothercontent='<form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10">
+								      <input type="email" class="form-control" id="inputEmail3" placeholder="這家店哪些菜色吸引你？">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10">
+								      <textarea class="form-control" rows="3" placeholder="對於這家店有甚麼想說的......"></textarea>
+								    </div>
+								  </div>
+								</form>'>
+							  <div class="title">
+							    樂樂家傳便當
+							  </div>
+							  <div class="content">
+							    <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+							    <p><a href="#">店家完整資訊</a></p>
+							  </div>
+							  
+							  
+							  
+							  
+							</div>
+							<div class="ui styled accordion filteritem" data-pos="stores" 
+							data-anothercontent='<form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10">
+								      <input type="email" class="form-control" id="inputEmail3" placeholder="這家店哪些菜色吸引你？">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10">
+								      <textarea class="form-control" rows="3" placeholder="對於這家店有甚麼想說的......"></textarea>
+								    </div>
+								  </div>
+								</form>'>
+							  <div class="title">
+							    港記燒臘
+							  </div>
+							  <div class="content">
+							    <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+							    <p><a href="#">店家完整資訊</a></p>
+							  </div>
+							  
+							  
+							  
+							  
+							</div>
+							<div class="ui styled accordion filteritem" data-pos="stores" 
+							data-anothercontent='<form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10">
+								      <input type="email" class="form-control" id="inputEmail3" placeholder="這家店哪些菜色吸引你？">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10">
+								      <textarea class="form-control" rows="3" placeholder="對於這家店有甚麼想說的......"></textarea>
+								    </div>
+								  </div>
+								</form>'>
+							  <div class="title">
+							    圓石
+							  </div>
+							  <div class="content">
+							    <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+							    <p><a href="#">店家完整資訊</a></p>
+							  </div>
+							  
+							  
+							  
+							  
+							</div>
+							<div class="ui styled accordion filteritem" data-pos="stores" 
+							data-anothercontent='<form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10">
+								      <input type="email" class="form-control" id="inputEmail3" placeholder="這家店哪些菜色吸引你？">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10">
+								      <textarea class="form-control" rows="3" placeholder="對於這家店有甚麼想說的......"></textarea>
+								    </div>
+								  </div>
+								</form>'>
+							  <div class="title">
+							    小妞炒飯
+							  </div>
+							  <div class="content">
+							    <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+							    <p><a href="#">店家完整資訊</a></p>
+							  </div>
+							  
+							  
+							  
+							  
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ten wide column">
+					<div id="customlistwrapper">
+						<div id="customlist">
+							<div class="ui styled accordion filteritem" data-pos="customlist" data-storecontent='<p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+							    <p><a href="#">店家完整資訊</a></p>'>
+							  <div class="title">
+							    南園街鍋貼
+							  </div>
+							  <div class="content">
+							    <form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">推薦菜色</label>
+								    <div class="col-sm-10">
+								      <input type="text" class="form-control" id="inputEmail3" placeholder="這家店哪些菜色吸引你？" name="recommendmeal">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">備註</label>
+								    <div class="col-sm-10">
+								      <textarea class="form-control" rows="3" placeholder="對於這家店有甚麼想說的......" name="storedescription"></textarea>
+								    </div>
+								  </div>
+								</form>
+							  </div> 
+							</div>
+						</div>
+					</div>
+					<div style="margin-top:20px;width:90%">
+						<div class="ui button work" tabindex="0" id="customlistnextbutton">
+						  <div class="visible content">下一步</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="customlistdesription">
+				<div id="listdescriptionwrapper">
+					<div id="listdescriptionformwrapper">
+						<form class="form-horizontal" role="form">
+						  <div class="form-group">
+						    <label for="inputEmail3" class="col-sm-2 control-label">名稱</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="inputEmail3" placeholder="輸入你的清單名稱">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputPassword3" class="col-sm-2 control-label">標籤</label>
+						    <div class="col-sm-10">
+						      <div class="ui fluid multiple search selection dropdown">
+              <input type="hidden" name="tag" value="">
+              <input class="search" tabindex="0"><div class="default text" style="color: rgb(179,179,179);">標籤可以讓其他使用者更容易搜尋到你的清單</div>
+              <div class="menu transition hidden" id="searchdropdownmenu" tabindex="-1"><div class="item" data-value="1" data-title="早餐" data-content="紮等 breakfast 早餐">早餐</div><div class="item" data-value="2" data-title="西餐" data-content="洋人引進的美食XDDD">西餐</div><div class="item" data-value="3" data-title="古早味" data-content="懷舊的味道">古早味</div><div class="item selected" data-value="4" data-title="甜點" data-content="女人的第二個胃">甜點</div><div class="item" data-value="5" data-title="飲料" data-content="喝喝喝">飲料</div><div class="item" data-value="6" data-title="麵食" data-content="老闆下麵給你吃！">麵食</div><div class="item" data-value="7" data-title="焗烤" data-content="好吃的焗烤">焗烤</div><div class="item" data-value="8" data-title="義大利麵" data-content="就是義大利麵">義大利麵</div><div class="item" data-value="9" data-title="女人的最愛" data-content="各種女生喜歡吃的店家">女人的最愛</div><div class="item" data-value="10" data-title="冰品" data-content="夏天就是要吃冰，不然要幹麻？">冰品</div><div class="item" data-value="11" data-title="約會聖地" data-content="轉那，轉那，七彩霓虹燈！閃死你！">約會聖地</div><div class="item" data-value="12" data-title="單身煉獄" data-content="QAQQQQQQ">單身煉獄</div><div class="item" data-value="13" data-title="韓國料理" data-content="韓國料理">韓國料理</div><div class="item" data-value="14" data-title="日本料理" data-content="日本料理">日本料理</div><div class="item" data-value="15" data-title="客家美食" data-content="台灣傳統客家美食">客家美食</div><div class="item" data-value="16" data-title="速食" data-content="速食餐點">速食</div><div class="item" data-value="17" data-title="不健康" data-content="專賣垃圾食物店家">不健康</div><div class="item" data-value="18" data-title="老鼠蟑螂滿街跑" data-content="O_O 好噁心">老鼠蟑螂滿街跑</div><div class="item" data-value="19" data-title="男人最愛" data-content="男人最愛">男人最愛</div><div class="item" data-value="20" data-title="下午茶" data-content="下午茶">下午茶</div><div class="item" data-value="21" data-title="宵夜" data-content="夜晚的好夥伴">宵夜</div><div class="item" data-value="22" data-title="深夜" data-content="深夜寂寞孤單覺得冷，就是要吃東西呀">深夜</div></div>
+            </div>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputPassword3" class="col-sm-2 control-label">備註</label>
+						    <div class="col-sm-10">
+						      <textarea class="form-control" rows="3" placeholder="介紹一下你的清單!" name="storedescription" onpropertychange="this.style.height=this.scrollHeight + 'px'" oninput="this.style.height=this.scrollHeight + 'px'"></textarea>
+						    </div>
+						  </div>
+						  <div id="customlistsubmitbutton" class="btn btn-default">送出</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

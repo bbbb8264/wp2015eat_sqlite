@@ -1,0 +1,83 @@
+.filteritem{
+	margin-top: 5px;
+	text-align: center;
+	z-index: 10;
+}
+#storesfilter{
+	width: 95%;
+	float: right;
+	border-radius: 10px;
+	background-color: #C6C6C6;
+	padding: 20px 20px;
+	box-shadow: 3px 3px 10px -4px rgba(0,0,0,0.75);
+}
+#stores{
+	margin-top: 20px;
+	min-height: 400px;
+	background-color: white;
+	padding: 0.1px 5px 5px 5px;
+	border-radius:5px;
+}
+#customlistwrapper{
+	min-height: 400px;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #C6C6C6;
+    box-shadow: 3px 3px 10px -4px rgba(0,0,0,0.75);
+}
+#customlist{
+	min-height: 400px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0.1px;
+}
+#customlist .filteritem{
+	margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#customlist .filteritem .content{
+	padding: .5em 2.5em .1em 1.5em;
+}
+textarea{
+	resize:none;
+	overflow: hidden;
+	min-height: 150px;
+}
+#customlistmenu{
+	float:left
+}
+#shiftcontroller{
+	width:5000px;
+}
+#customlistdesription{
+	float:left;
+}
+#customlistnextbutton{
+	margin: auto;
+	display:block;
+	width: 30%;
+	visibility: hidden;
+}
+#customlistnextbutton.work{
+	visibility: visible;
+}
+#shiftcontroller{
+	transition: margin-left 0.5s;
+}
+#listdescriptionwrapper{
+	width: 110%;
+	position: relative;
+	border-radius: 10px;
+	background-color: #C6C6C6;
+	padding: 20px 20px;
+	box-shadow: 3px 3px 10px -4px rgba(0,0,0,0.75);
+}
+#listdescriptionformwrapper{
+}
+#customlistsubmitbutton{
+	margin: auto;
+    display: block;
+    width: 100px;
+}
